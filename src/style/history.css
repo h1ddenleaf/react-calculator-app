@@ -1,0 +1,49 @@
+.history-button {
+  height: 45px;
+  font-size: 20px;
+  padding: 5px 5px;
+  text-align: center;
+  box-sizing: border-box;
+  border: none;
+  background-color: lightblue;
+  border-radius: 15%;
+}
+
+.list-item {
+  height: 45px;
+  font-size: 20px;
+  margin: 15px 0px;
+  text-align: center;
+  box-sizing: border-box;
+}
+
+.dropdown-li {
+  width: 250px;
+  position: absolute;
+  z-index: 3;
+  padding: 0px 15px;
+  background-color: #f4fefe;
+  font-size: 20px;
+}
+
+.dropdown.closed .dropdown-li {
+  visibility: hidden;
+}
+
+.dropdown.open .dropdown-li {
+  visibility: visible;
+}
+
+.list-result {
+  width: 100%;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 6px;
+  font-family: "League Spartan", sans-serif;
+  font-weight: bold;
+  border-radius: 10px;
+  cursor: pointer;
+  outline: none;
+}
