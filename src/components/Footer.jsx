@@ -3,7 +3,11 @@ const Footer = () => {
     <footer>
       Made by Brian Nguyen.
       <br />
-      <a href="" target="_blank" rel="noreferrer">
+      <a
+        href="https://github.com/h1ddenleaf/react-calculator-app"
+        target="_blank"
+        rel="noreferrer"
+      >
         GitHub
       </a>
     </footer>

@@ -5,6 +5,8 @@ import {
   setEqn,
   clearEqn,
   addToEqn,
+  setNewEqn,
+  addHistory,
   getStyleName,
 } from "../util/ButtonHelpers";
 
@@ -12,6 +14,10 @@ const Button = ({ value }) => {
   const { calc, setCalc } = useContext(CalcContext);
 
   const handleBasicClick = () => {
+    if (calc.newEqn) {
+      clearEqn(setCalc);
+      setNewEqn(setCalc, false);
+    }
     addToEqn(setCalc, value.toString());
   };
 
@@ -35,7 +41,9 @@ const Button = ({ value }) => {
     if (val != null) {
       let valStr = val.toString();
       if (valStr.length > 10) valStr = val.toPrecision(8).toString();
+      if (!calc.newEqn) addHistory(setCalc, calc.equation);
       setEqn(setCalc, valStr);
+      setNewEqn(setCalc, true);
     }
   };
 

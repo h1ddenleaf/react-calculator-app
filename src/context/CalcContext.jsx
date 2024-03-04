@@ -5,6 +5,8 @@ export const CalcContext = createContext();
 const CalcProvider = ({ children }) => {
   const [calc, setCalc] = useState({
     equation: "",
+    newEqn: true,
+    history: [],
   });
 
   const providerValue = {

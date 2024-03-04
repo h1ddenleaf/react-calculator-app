@@ -1,17 +1,28 @@
-export const addToEqn = (setState, val) => {
-  setState((prevState) => {
-    const prev = prevState.equation;
+export const addToEqn = (setContext, val) => {
+  setContext((prevContext) => {
+    const prev = prevContext.equation;
     const newEqn = prev === "0" ? val : prev + val;
-    return { ...prevState, equation: newEqn };
+    return { ...prevContext, equation: newEqn };
   });
 };
 
-export const setEqn = (setState, val) => {
-  setState((prevState) => ({ ...prevState, equation: val }));
+export const setEqn = (setContext, val) => {
+  setContext((prevContext) => ({ ...prevContext, equation: val }));
 };
 
-export const clearEqn = (setState) => {
-  setState((prevState) => ({ ...prevState, equation: "0" }));
+export const clearEqn = (setContext) => {
+  setContext((prevContext) => ({ ...prevContext, equation: "0" }));
+};
+
+export const setNewEqn = (setContext, bool) => {
+  setContext((prevContext) => ({ ...prevContext, newEqn: bool }));
+};
+
+export const addHistory = (setContext, historyString) => {
+  setContext((prevContext) => ({
+    ...prevContext,
+    history: [...prevContext.history, historyString],
+  }));
 };
 
 export const getStyleName = (btn) => {
