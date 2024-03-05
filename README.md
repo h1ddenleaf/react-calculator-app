@@ -1,4 +1,4 @@
-# Calculator - [**Try it out**](https://ui-calculate.web.app)
+# Calculator - [**Try it out**](https://h1ddenleaf.github.io/react-calculator-app/)
 
 ### Features
 
